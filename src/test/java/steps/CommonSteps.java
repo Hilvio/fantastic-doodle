@@ -13,7 +13,7 @@ public class CommonSteps {
     String apiKey = Environment.API_KEY;
     Response response;
 
-    @Step("Then request is executed successfully")
+    @Step("Request is executed successfully")
     public void requestIsSuccessfull() {
         response.then()
                 .statusCode(200);

@@ -16,7 +16,7 @@ public class StoreSteps extends CommonSteps {
 
     private String endPoint = baseUrl + "/store/order";
 
-    @Step("Given user places an order")
+    @Step("User places an order")
     public void placeOrder(Order order) {
 
         response = SerenityRest
@@ -27,14 +27,14 @@ public class StoreSteps extends CommonSteps {
                     .post(endPoint);
     }
 
-    @Step("Then the order has correct status")
+    @Step("The order has correct status")
     public void orderHasStatus(String expectedStatus) {
 
         Order order = response.as(Order.class);
         Assert.assertThat("Unexpected order status! ", order.getStatus(), is(equalTo(expectedStatus)));
     }
 
-    @Step("Remove the order")
+    @Step("User removes the order")
     public Response removeOrderWithId(long id) {
 
         return SerenityRest

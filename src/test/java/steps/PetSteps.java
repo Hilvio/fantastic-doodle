@@ -12,7 +12,7 @@ public class PetSteps extends CommonSteps {
 
     private String endPoint  = baseUrl + "/pet";
 
-    @Step("Given a pet is added to the store")
+    @Step("User adds a pet to the store")
     public void addPet(Pet pet) {
         response = SerenityRest
                 .given()
@@ -22,7 +22,7 @@ public class PetSteps extends CommonSteps {
                     .post(endPoint);
     }
 
-    @Step("When user removes a pet from the store")
+    @Step("User removes a pet from the store")
     public void removePetWithId(long id) {
         response = SerenityRest
                 .given()
