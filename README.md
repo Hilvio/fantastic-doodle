@@ -5,7 +5,7 @@
 To run all the tests
 
 ```
-gradle clean test aggregate -Dtags="feature:Pet"
+gradle clean test aggregate
 ```
 
 To run only tests with tag feature:Pet
